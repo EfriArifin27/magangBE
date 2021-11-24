@@ -1,0 +1,15 @@
+{
+  "name": "portofolio-website-efri",
+  "version": "1.0.0",
+  "description": "Backend Portofolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node index"
+  },
+  "author": "Efri",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.24.0"
+  }
+}

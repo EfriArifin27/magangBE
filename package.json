@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node index"
+    "start": "node index"
   },
   "author": "Efri",
   "license": "ISC",
   "dependencies": {
-    "fastify": "^3.24.0"
+    "fastify": "^3.24.0",
+    "fastify-static": "^4.5.0"
   }
 }

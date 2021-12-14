@@ -1,22 +1,22 @@
 // Require the framework and instantiate it
 const fastify = require('fastify')({ logger: true });
-const path = require("path")
+const path = require('path');
 
 // Register plugins
 fastify.register(require('fastify-static'), {
-  root: path.join(__dirname, 'public/assets'),
-  prefix: "/", // optional: default '/'
-})
+  root: path.join(__dirname, 'public'),
+  prefix: '/', // optional: default '/'
+});
 
 // Declare a route
 fastify.get('/another/path', function (req, reply) {
-  return reply.sendFile("index.html") // serving path.join(__dirname, 'public', 'index.html') directly
-})
+ reply.sendFile("index.html") // serving path.join(__dirname, 'public', 'index.html') directly
+});
 
 // Declare a route
 fastify.get('/', async (request, reply) => {
   return { hello: 'world' }
-})
+});
 
 // Run the server!
 const start = async () => {
@@ -27,4 +27,5 @@ const start = async () => {
     process.exit(1)
   }
 }
-start()
+
+start();
